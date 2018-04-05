@@ -1,1 +1,264 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bodyBlock .dashboard_view>li>a {
+    background-color: #ffff;
+    color: #444;
+    border-radius: 0px;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.bodyBlock .dashboard_view>li.active>a {
+    border-bottom: 4px solid #69b23b;
+    background-color: #ffff;
+    color: #444;
+    border-radius: 0px;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.bodyBlock .insights {
+    padding: 10px 15px;
+    /* box-shadow: 0px 1px 1px 0px rgba(102, 102, 102, 1); */
+    max-height: 420px;
+}
+
+.bodyBlock .insights>div {
+    display: table;
+    width: 100%;
+}
+
+.scroll_div {
+    /* max-height: 265px;
+    width: 100%;
+    overflow-x: hidden; */
+    height: 265px;
+    width: 100%;
+}
+
+
+/* .scrollable_list,
+.scroll_div {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+.scrollable_list::-webkit-scrollbar,
+.scroll_div::-webkit-scrollbar {
+    /* remove scrollbar space */
+
+
+/* background: transparent; */
+
+
+/* } */
+
+.bodyBlock .insights>div .category {
+    font-size: 14px;
+    font-family: 'SourceSansPro';
+    font-weight: 400;
+}
+
+.bodyBlock .insights>div .label {
+    color: #444;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0px;
+    font-family: 'SourceSansPro';
+    font-weight: 200;
+}
+
+.bodyBlock .insights>div .label_value {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: 'SourceSansPro';
+    font-weight: 600;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list>li {
+    border-bottom: 1px solid #ededed;
+    padding: 10px 0px;
+    display: flex;
+    font-size: 12px;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list>li:last-child {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list>li .small {
+    font-size: 12px;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list>li .rightAlign_Value {
+    margin: 0px 0px 0px auto;
+}
+
+.bodyBlock .insights>div .payroll_info_list .progress {
+    height: 6px;
+}
+
+.bodyBlock .insights>div .payroll_info_list .full-time-progress .progress-bar {
+    background-color: #69b23b;
+}
+
+.bodyBlock .insights>div .payroll_info_list .part-time-progress .progress-bar {
+    background-color: #777;
+}
+
+.bodyBlock .insights .sub .small {
+    font-size: 12px;
+}
+
+.bodyBlock .insights .sub .rise_percent {
+    color: #69b23b;
+    font-family: 'Source-Sans-Pro';
+    font-weight: 600;
+}
+
+.bodyBlock .insights .sub .fall_percent {
+    color: red;
+    font-family: 'Source-Sans-Pro';
+    font-weight: 600;
+}
+
+.bodyBlock .insights .sub .fall_percent i,
+.bodyBlock .insights .sub .rise_percent i {
+    margin-left: 3px;
+}
+
+.bodyBlock .insights>div .tag {
+    background-color: #69b23b;
+    color: #fff;
+    margin-top: 0px;
+    padding: 0px 5px;
+    font-size: 12px;
+}
+
+.bodyBlock .notification_List {
+    background-color: #ebf6ef;
+    padding: 5px;
+}
+
+.bodyBlock .todo_list {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 10px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+.bodyBlock .todo_list .todoItem_icon {
+    text-align: right;
+    width: 50px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.bodyBlock .todo_list .todoItem_icon i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+    border-top: 1px solid #e7eaec;
+    border-bottom: 1px solid #e7eaec;
+    border-left: 1px solid #e7eaec;
+    background: #f8f8f8;
+}
+
+.bodyBlock .todo_list .todoItem_content {
+    border-left: 1px solid #e7eaec;
+    border-top: 1px solid #e7eaec;
+    padding-top: 10px;
+    min-height: 60px;
+}
+
+.bodyBlock .todo_list .todoItem_content .todo_actions {
+    font-family: 'SourceSansPro';
+    font-weight: 700;
+}
+
+.bodyBlock .todo_list .todoItem_content i {
+    margin-right: 3px;
+}
+
+.bodyBlock .insights>div .color1 {
+    background-color: #a5b23b;
+    border: none;
+}
+
+.bodyBlock .insights>div .color2 {
+    background-color: #3bb249;
+    border: none;
+}
+
+.bodyBlock .insights>div .color3 {
+    background-color: #3e6823;
+    border: none;
+}
+
+.bodyBlock .insights>div .activitylogList {
+    margin: 24px 0px;
+    padding: 0;
+    list-style: none;
+}
+
+.bodyBlock .insights>div .activitylogList .activity-image {
+    width: 50px;
+    height: 50px;
+}
+
+.bodyBlock .insights>div .activitylogList li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #999999;
+}
+
+.bodyBlock .insights>div .activitylogList li .chat-body {
+    margin-left: 60px;
+}
+
+.bodyBlock .insights>div .activitylogList li .chat-body>p {
+    margin: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    .bodyBlock .insights {
+        padding: 10px 15px;
+        /* box-shadow: 0px 1px 1px 0px rgba(102, 102, 102, 1); */
+        max-height: inherit;
+    }
+}
+
+.placeholder {
+    width: 50px;
+    height: 20px;
+    background-color: black;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeHolderShimmer;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}

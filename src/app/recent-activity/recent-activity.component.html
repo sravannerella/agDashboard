@@ -1,0 +1,34 @@
+<div class="row bodyBlock">
+    <div class="col col-xs-12 col-sm-6">
+        <div class="island">
+            <div class="insights">
+                <div>
+                    <h5 class="category pull-left">Recent Activity</h5>
+                    <div class="sub tag text-muted pull-right">
+                        <small class="small">This Month</small>
+                    </div>
+                </div>
+                <div class="recent_list">
+                    <div ss-container class="scroll_div">
+                        <ul class="activitylogList scrollable_list">
+                            <li *ngFor="let x of recentData; let i = index;" class="left clearfix activitylog">
+                                <span class="chat-img pull-left">
+                                  <img src="{{x.imgsrc}}" alt="User " class="img-circle activity-image">
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <div class="user">{{x.name}}</div>
+                                    </div>
+                                    <p>
+                                        <a href="#">{{x.task}}</a>
+                                    </p>
+                                    <small class="text-muted">{{x.time}}</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

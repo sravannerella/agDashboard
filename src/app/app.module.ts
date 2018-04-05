@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecentActivityComponent
   ],
   imports: [
     BrowserModule
