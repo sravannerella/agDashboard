@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule
