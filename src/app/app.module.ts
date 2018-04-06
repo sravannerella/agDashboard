@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+
+import { RecentActivityComponent } from './recent-activity/recent-activity.component';
+import { PayrollInformationComponent } from './payroll-information/payroll-information.component';
 import { TodosComponent } from './todos/todos.component';
 import { CardComponent } from './card/card.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -18,6 +21,8 @@ import { LoansComponent } from './loans/loans.component';
 @NgModule({
   declarations: [
     AppComponent,
+    RecentActivityComponent,
+    PayrollInformationComponent,
     TodosComponent,
     CardComponent,
     EmployeesComponent,
