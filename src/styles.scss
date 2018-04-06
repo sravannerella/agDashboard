@@ -100,8 +100,17 @@
     margin: 0px 0px 0px auto;
 }
 
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list .batchList {
+    flex-direction: column;
+}
+
+.bodyBlock .insights>div .payroll_info_list .scroll_div .scrollable_list .batchList>div {
+    display: flex;
+}
+
 .bodyBlock .insights>div .payroll_info_list .progress {
     height: 6px;
+    margin: 10px 0px;
 }
 
 .bodyBlock .insights>div .payroll_info_list .full-time-progress .progress-bar {
