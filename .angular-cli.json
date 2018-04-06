@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "../node_modules/font-awesome/css/font-awesome.min.css"
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/c3/c3.min.css"
       ],
       "addons": [
         "../node_modules/font-awesome/fonts/*.+(ttf|otf|eot|svg|woff|woff2)"

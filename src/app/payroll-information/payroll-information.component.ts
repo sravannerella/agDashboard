@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import * as c3  from "c3";
+import * as c3 from 'c3';
 
 @Component({
   selector: 'app-payroll-information',
@@ -9,63 +9,60 @@ import * as c3  from "c3";
 export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummary: any;
-   batchSummary:any;
+   batchSummary: any;
 
-  constructor() { 
+  constructor() {
     this.payrollSummary = [{
-      "amt_desc":"Net Amount",
-      "amt_value":"$12,37,897"
+      'amt_desc': 'Net Amount',
+      'amt_value': '$12,37,897'
     },
       {
-        "amt_desc": "TDS",
-        "amt_value": "$12,37,897"
+        'amt_desc': 'TDS',
+        'amt_value': '$12,37,897'
       },
       {
-        "amt_desc": "Loans/Advances",
-        "amt_value": "$12,37,897"
+        'amt_desc': 'Loans/Advances',
+        'amt_value': '$12,37,897'
       },
       {
-        "amt_desc": "Loss of Pay",
-        "amt_value": "$12,37,897"
+        'amt_desc': 'Loss of Pay',
+        'amt_value': '$12,37,897'
       },
       {
-        "amt_desc": "Other",
-        "amt_value": "$12,37,897"
+        'amt_desc': 'Other',
+        'amt_value': '$12,37,897'
       },
       {
-        "amt_desc": "Total",
-        "amt_value": "$14,37,897"
+        'amt_desc': 'Total',
+        'amt_value': '$14,37,897'
       }
 
     ];
 
     this.batchSummary = [{
-      "batch_desc":"Full Time Batch",
-      "batch_value":"$12,34,56,789",
-      "width":"70"
+      'batch_desc': 'Full Time Batch',
+      'batch_value': '$12,34,56,789',
+      'width': '70'
     },
       {
-        "batch_desc": "Full Time Batch",
-        "batch_value": "$12,34,56,789",
-        "width": "40"
+        'batch_desc': 'Full Time Batch',
+        'batch_value': '$12,34,56,789',
+        'width': '40'
       },
       {
-        "batch_desc": "Part Time Batch",
-        "batch_value": "$12,34,56,789",
-        "width": "70"
+        'batch_desc': 'Part Time Batch',
+        'batch_value': '$12,34,56,789',
+        'width': '70'
       },
       {
-        "batch_desc": "Part Time Batch",
-        "batch_value": "$12,34,56,789",
-        "width": "90"
+        'batch_desc': 'Part Time Batch',
+        'batch_value': '$12,34,56,789',
+        'width': '90'
       }];
   }
 
-  ngOnInit() {
-  }
-
-  ngAfterViewInit(){
-    var chart = c3.generate({
+  ngAfterViewInit() {
+    const chart = c3.generate({
       data: {
         columns: [
           ['Net Amount', 430, 200, 200, 400, 150, 250],

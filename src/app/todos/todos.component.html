@@ -11,8 +11,8 @@
         </div>
 
         <div ss-container class="scroll_div">
-            <div class="todo_list scrollable_list" *ngFor='let todo of todos'>
-                <div class="row">
+            <div class="todo_list scrollable_list">
+                <div class="row" *ngFor='let todo of todos'>
                     <div class="col-xs-1 todoItem_icon">
                         <i class="{{todo.icon}}" aria-hidden="true"></i>
                     </div>
