@@ -1,0 +1,43 @@
+<div class="row bodyBlock">
+	<div class="col col-xs-12 col-sm-6">
+		<div class="island">
+			<div class="insights">
+				<div>
+					<h5 class="category pull-left">ToDo's</h5>
+				</div>
+			</div>
+
+			<div class="notification_List">
+				<h4>You have {{size}} pending action items</h4>
+			</div>
+
+			<div ss-container class="scroll_div">
+				<div class="todo_list scrollable_list" *ngFor='let todo of todos'>
+					<div class="row">
+						<div class="col-xs-1 todoItem_icon">
+							<i class="{{todo.icon}}" aria-hidden="true"></i>
+						</div>
+
+						<div class="col-xs-10 todoItem_content">
+							<div class="text-muted">
+								<span class="todo_actions">{{todo.title}}</span>
+								<small class="small">({{todo.status}})</small>
+							</div>
+							<div>
+								<div class="text-muted pull-left">
+									<small class="small">Submitted by {{todo.submittedBy}}</small>
+								</div>
+								<div class="text-muted pull-right">
+									<small class="small">
+										<i class="fa fa-clock-o" aria-hidden="true"></i>{{todo.time}}
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

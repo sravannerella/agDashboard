@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 .bodyBlock .dashboard_view>li>a {
     background-color: #ffff;
     color: #444;
@@ -111,7 +113,7 @@
 .bodyBlock .insights>div .payroll_info_list .progress {
     height: 6px;
     margin: 10px 0px;
-}
+
 
 .bodyBlock .insights>div .payroll_info_list .full-time-progress .progress-bar {
     background-color: #69b23b;
