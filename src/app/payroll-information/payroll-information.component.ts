@@ -10,7 +10,7 @@ export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummary: any;
    batchSummary: any;
-
+  color:any;
   constructor() {
     this.payrollSummary = [{
       'amt_desc': 'Net Amount',
@@ -38,30 +38,27 @@ export class PayrollInformationComponent implements AfterViewInit {
       }
 
     ];
-
+    this.color = ['#69b23b', '#2c4b19', '#777','#93d37c','#444'];
     this.batchSummary = [{
       'batch_desc': 'Full Time Batch',
       'batch_value': '$12,34,56,789',
-      'width': '70',
-      'backgroundcolor':'#69b23b'
+      'width': '70'
+     
     },
       {
         'batch_desc': 'Full Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '40',
-        'backgroundcolor': '#2c4b19'
+        'width': '40'
       },
       {
         'batch_desc': 'Part Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '70',
-        'backgroundcolor': '#83c858'
+        'width': '70'
       },
       {
         'batch_desc': 'Part Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '90',
-        'backgroundcolor': '#93d37c'
+        'width': '90'
       }];
   }
 

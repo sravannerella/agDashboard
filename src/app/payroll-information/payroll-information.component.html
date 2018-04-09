@@ -28,7 +28,7 @@
                         <h4 class="label">Batches</h4>
                         <div ss-container class="scroll_div">
                             <ul class="scrollable_list">
-                                <li *ngFor="let x of batchSummary; let i = index;" class="text-muted small batchList">
+                                <li *ngFor="let x of batchSummary;let i = index;" class="text-muted small batchList">
                                     <div>
                                         <small class="small">{{x.batch_desc}}</small>
                                         <h4 class="rightAlign_Value">{{x.batch_value}}
@@ -36,7 +36,7 @@
                                     </div>
 
                                     <div class="progress full-time-progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width':x.width + '%','background-color':x.backgroundcolor}">
+                                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width':x.width + '%','background-color':color[i]}">
                                         </div>
                                     </div>
                                 </li>
