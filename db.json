@@ -17,8 +17,38 @@
 	    }
 	  ]
   },
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
+  "expenses": {
+  	"json": [
+  		{ 
+	    	"title": "Expenses",
+	    	"label": "Total Expenses",
+	    	"labelData": "$12,000",
+	    	"tag" : "This Week",
+	    	"subtext": "20%"
+	    }
+  	]
+  },
+  "invoices": {
+  	"json": [
+  		{
+  			"title": "Invoices",
+  			"label": "Total Due",
+  			"labelData": "$12,000.12",
+  			"tag": "This Month",
+  			"subtext": "April 9"
+  		}
+  	]
+  },
+  "hrrequests": {
+  	"json": [
+  		{
+  			"title": "HR Requests",
+  			"label": "Open",
+  			"labelData": "6",
+  			"tag": "This Month",
+  			"subtext": "April 9"	
+  		}
+  	]
+  },
   "profile": { "name": "typicode" }
 }

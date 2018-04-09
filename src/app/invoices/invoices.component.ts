@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Card } from '../card/card';
+import { InvoiceService } from '../providers/invoices/invoice.service';
 
 @Component({
   selector: 'app-invoices',
@@ -10,10 +11,10 @@ import { Card } from '../card/card';
 export class InvoicesComponent extends CardComponent {
 
     card: any = [];
-    constructor() {
+    constructor(private invoiceService: InvoiceService) {
       super();
-      this.card.push(new Card('Invoices', 'Total Due', '12,000.12', 'This Month', 'April 2'));
-      this.card.push(new Card('Invoices', 'Total Due', '5000.12', 'This Month', 'April 2'));
+
+      this.subscribe(this.invoiceService.getInvoices());
     }
 
 }

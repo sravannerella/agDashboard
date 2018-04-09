@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Card } from '../card/card';
+import { HrrequestService } from '../providers/hrrequest/hrrequest.service';
 
 @Component({
   selector: 'app-hrrequest',
@@ -9,9 +10,9 @@ import { Card } from '../card/card';
 })
 export class HrrequestComponent extends CardComponent {
   card: any = [];
-  constructor() {
+  constructor(private hrService: HrrequestService) {
     super();
-    this.card.push(new Card('HR Requests', 'Open', '6', 'This Month', 'of 10'));
+    this.subscribe(hrService.getHrRequests());
   }
 
 }

@@ -12,8 +12,18 @@ export class CardComponent {
     currentIndex = 0;
 
     public jsonToClass(data) {
-      console.log('JSON TO CLASS', data, typeof(data));
       return new Card(data.title, data.label, data.labelData, data.tag, data.subtext);
+    }
+
+    public subscribe(service) {
+      service.subscribe(data => {
+        if (data.hasOwnProperty('json') ) {
+          const jsonData = data['json'];
+          jsonData.map(item => {
+            this.card.push(this.jsonToClass(item));
+          });
+        }
+      });
     }
 
     next(index) {

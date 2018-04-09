@@ -16,8 +16,11 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 import { SavingsComponent } from './savings/savings.component';
 import { LoansComponent } from './loans/loans.component';
-import { EmployeesService } from './providers/employees.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeesService } from './providers/employees/employees.service';
+import { ExpensesService } from './providers/expenses/expenses.service';
+import { InvoiceService } from './providers/invoices/invoice.service';
+import { HrrequestService } from './providers/hrrequest/hrrequest.service';
 
 
 @NgModule({
@@ -40,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [EmployeesService],
+  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
