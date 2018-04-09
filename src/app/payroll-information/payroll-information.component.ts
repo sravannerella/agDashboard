@@ -12,15 +12,15 @@ export class PayrollInformationComponent implements AfterViewInit {
    payrollSummary: any;
    batchSummary: any;
   color:any;
-  constructor() {
+
    
-  this.color = ['#69b23b', '#2c4b19', '#777','#93d37c','#444'];
-   
+ 
   constructor(private payrollService: PayrollService) {
 
     this.getPayrollSummary();
     this.getBatchSummary();
-    
+    this.color = ['#69b23b', '#2c4b19', '#777', '#93d37c', '#444'];
+
   }
 
   getPayrollSummary() {
