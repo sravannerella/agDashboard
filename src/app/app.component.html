@@ -1,13 +1,5 @@
 <div class="row bodyBlock">
-    <app-employees></app-employees>
-    <app-invoices></app-invoices>
-    <app-plan-usage></app-plan-usage>
-    <app-hrrequest></app-hrrequest>
-
-    <app-timesheet></app-timesheet>
-    <app-expenses></app-expenses>
-    <app-savings></app-savings>
-    <app-loans></app-loans>
+    <app-card *ngFor="let card of cards" [card]='card' [mode]='"md"'></app-card>
 </div>
 <app-payroll-information></app-payroll-information>
 <div class="row bodyBlock">
