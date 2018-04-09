@@ -42,22 +42,26 @@ export class PayrollInformationComponent implements AfterViewInit {
     this.batchSummary = [{
       'batch_desc': 'Full Time Batch',
       'batch_value': '$12,34,56,789',
-      'width': '70'
+      'width': '70',
+      'backgroundcolor':'#69b23b'
     },
       {
         'batch_desc': 'Full Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '40'
+        'width': '40',
+        'backgroundcolor': '#2c4b19'
       },
       {
         'batch_desc': 'Part Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '70'
+        'width': '70',
+        'backgroundcolor': '#83c858'
       },
       {
         'batch_desc': 'Part Time Batch',
         'batch_value': '$12,34,56,789',
-        'width': '90'
+        'width': '90',
+        'backgroundcolor': '#93d37c'
       }];
   }
 
