@@ -16,6 +16,9 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 import { SavingsComponent } from './savings/savings.component';
 import { LoansComponent } from './loans/loans.component';
+import { EmployeesService } from './providers/employees.service';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,9 +38,11 @@ import { LoansComponent } from './loans/loans.component';
     LoansComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
