@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecentActivityService } from '../providers/recentActivity/recent-activity.service';
 
 @Component({
   selector: 'app-recent-activity',
@@ -8,29 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class RecentActivityComponent implements OnInit {
   recentData: any;
 
-  constructor() { 
-    this.recentData = [{
-      'imgsrc':"http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
-      'name':'John',
-      'task':'Created Timesheets',
-      'time':'4/5/2018'
-    },
-      {
-        'imgsrc': "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
-        'name': 'John',
-        'task': 'Created Timesheets',
-        'time': '4/5/2018'
-      },
-      {
-        'imgsrc': "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
-        'name': 'John',
-        'task': 'Created Timesheets',
-        'time': '4/5/2018'
-      }];
+  constructor(private recentDataService: RecentActivityService) {  
   }
 
   ngOnInit() {
-
+    this.getRecentActivity();
   }
-
+  getRecentActivity() {
+    this.recentDataService.getRecentActivity().subscribe(res => {
+      // console.log(res);
+      this.recentData = res;
+    },
+      error => {
+        console.log(error)
+      })
+  }
 }

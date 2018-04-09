@@ -1,0 +1,87 @@
+{
+  "employees": {
+	  "json":	[
+	    { 
+	    	"title": "Employees",
+	    	"label": "Total Employees",
+	    	"labelData": "150",
+	    	"tag" : "This Week",
+	    	"subtext": "April 9"
+	    },
+	    { 
+	    	"title": "Employees2",
+	    	"label": "Total Employees2",
+	    	"labelData": "1502",
+	    	"tag" : "This Week2",
+	    	"subtext": "April 10"
+	    }
+	  ]
+  },
+  "expenses": {
+  	"json": [
+  		{ 
+	    	"title": "Expenses",
+	    	"label": "Total Expenses",
+	    	"labelData": "$12,000",
+	    	"tag" : "This Week",
+	    	"subtext": "20%"
+	    }
+  	]
+  },
+  "invoices": {
+  	"json": [
+  		{
+  			"title": "Invoices",
+  			"label": "Total Due",
+  			"labelData": "$12,000.12",
+  			"tag": "This Month",
+  			"subtext": "April 9"
+  		}
+  	]
+  },
+  "hrrequests": {
+  	"json": [
+  		{
+  			"title": "HR Requests",
+  			"label": "Open",
+  			"labelData": "6",
+  			"tag": "This Month",
+  			"subtext": "April 9"	
+  		}
+  	]
+  },
+  "planusage" : {
+  	"json": [
+  		{
+  			"title": "Plan Usage",
+  			"label": "",
+  			"labelData": "65%",
+  			"tag": "",
+  			"subtext": "Standard"
+  		}
+  	]
+  },
+  "loans": {
+  	"json": [
+  		{
+  			"title": "Loans",
+  			"label": "",
+  			"labelData": "$45,000",
+  			"tag": "Total Pay Advance",
+  			"subtext": ""
+  		}
+  	]
+  },
+  "savings": {
+  	"json": [
+  		{
+  			"title": "Savings",
+  			"label": "",
+  			"labelData": "$68,400",
+  			"tag": "",
+  			"subtext": "Total of 6 Savings"	
+  		}
+  	]
+  },
+  "profile": { "name": "typicode" }
+}

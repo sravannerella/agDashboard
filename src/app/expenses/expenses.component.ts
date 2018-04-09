@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Card } from '../card/card';
+import { ExpensesService } from '../providers/expenses/expenses.service';
 
 @Component({
   selector: 'app-expenses',
@@ -10,9 +11,10 @@ import { Card } from '../card/card';
 export class ExpensesComponent extends CardComponent {
 
   card: any = [];
-  constructor() {
+  constructor(private expenseService: ExpensesService) {
     super();
-    this.card.push(new Card('Expenses', 'Total', '$12,000.12', 'This Month', '14%'));
+
+    this.subscribe(this.expenseService.getExpenses());
   }
 
 }

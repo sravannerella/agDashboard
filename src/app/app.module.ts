@@ -16,7 +16,17 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 import { SavingsComponent } from './savings/savings.component';
 import { LoansComponent } from './loans/loans.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeesService } from './providers/employees/employees.service';
+import { ExpensesService } from './providers/expenses/expenses.service';
+import { InvoiceService } from './providers/invoices/invoice.service';
+import { HrrequestService } from './providers/hrrequest/hrrequest.service';
+import { PlanUsageService } from './providers/plan-usage/plan-usage.service';
+import { LoansService } from './providers/loans/loans.service';
+import { SavingsService } from './providers/savings/savings.service';
+import { PayrollService } from './providers/payroll/payroll.service';
+import { TodosService } from './providers/todoList/todos.service';
+import { RecentActivityService } from './providers/recentActivity/recent-activity.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +45,10 @@ import { LoansComponent } from './loans/loans.component';
     LoansComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService, PlanUsageService, LoansService, SavingsService, PayrollService, TodosService, RecentActivityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

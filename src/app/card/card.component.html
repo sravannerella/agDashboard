@@ -2,7 +2,7 @@
     <div class="island">
         <div class="insights">
             <div>
-                <h5 class="category pull-left">{{card[currentIndex].title}}</h5>
+                <h5 class="category pull-left">{{card[currentIndex]?.title}}</h5>
 
                 <div *ngIf="card.length > 1" class="pull-right">
                     <i class="fa fa-chevron-left" (click)="previous(currentIndex)"></i>
@@ -10,15 +10,15 @@
                 </div>
             </div>
             <div>
-                <h5 class="label pull-left">{{card[currentIndex].label}}</h5>
-                <h4 class="label_value pull-right">{{card[currentIndex].labelData}}</h4>
+                <h5 class="label pull-left">{{card[currentIndex]?.label}}</h5>
+                <h4 class="label_value pull-right">{{card[currentIndex]?.labelData}}</h4>
             </div>
             <div>
                 <div class="sub tag period text-muted pull-left">
-                    <small class="small">{{card[currentIndex].tag}}</small>
+                    <small class="small">{{card[currentIndex]?.tag}}</small>
                 </div>
                 <div class="sub text-muted pull-right">
-                    <small class="small rise_percent">{{card[currentIndex].subtext}}<i class="fa fa-level-up" aria-hidden="true"></i></small>
+                    <small class="small rise_percent">{{card[currentIndex]?.subtext}}<i class="fa fa-level-up" aria-hidden="true"></i></small>
                 </div>
             </div>
         </div>

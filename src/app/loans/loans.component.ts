@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Card } from '../card/card';
+import { LoansService } from '../providers/loans/loans.service';
 
 @Component({
   selector: 'app-loans',
@@ -10,9 +11,10 @@ import { Card } from '../card/card';
 export class LoansComponent extends CardComponent {
 
   card: any = [];
-  constructor() {
+  constructor(private loanService: LoansService) {
     super();
-    this.card.push(new Card('Loans/Advances', '', '$45,000', 'Total Pay Advance', ''));
+    // this.card.push(new Card('Loans/Advances', '', '$45,000', 'Total Pay Advance', ''));
+    this.subscribe(loanService.getLoans());
   }
 
 }
