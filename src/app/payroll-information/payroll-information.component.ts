@@ -11,7 +11,11 @@ export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummary: any;
    batchSummary: any;
-
+  color:any;
+  constructor() {
+   
+  this.color = ['#69b23b', '#2c4b19', '#777','#93d37c','#444'];
+   
   constructor(private payrollService: PayrollService) {
 
     this.getPayrollSummary();
@@ -23,6 +27,7 @@ export class PayrollInformationComponent implements AfterViewInit {
     this.payrollService.getPayrollSummary().subscribe(res => {
       console.log(res);
       this.payrollSummary = res;
+
     },
       error => {
         console.log(error)
