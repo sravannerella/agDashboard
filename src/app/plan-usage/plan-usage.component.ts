@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Card } from '../card/card';
+import { PlanUsageService } from '../providers/plan-usage/plan-usage.service';
 
 @Component({
   selector: 'app-plan-usage',
@@ -10,9 +11,9 @@ import { Card } from '../card/card';
 export class PlanUsageComponent extends CardComponent {
 
   card: any = [];
-  constructor() {
+  constructor(private planService: PlanUsageService) {
     super();
-    this.card.push(new Card('Plan Usage', '', '65%', '', 'Standard'));
+    this.subscribe(planService.getPlanUsage());
   }
 
 }

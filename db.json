@@ -50,5 +50,38 @@
   		}
   	]
   },
+  "planusage" : {
+  	"json": [
+  		{
+  			"title": "Plan Usage",
+  			"label": "",
+  			"labelData": "65%",
+  			"tag": "",
+  			"subtext": "Standard"
+  		}
+  	]
+  },
+  "loans": {
+  	"json": [
+  		{
+  			"title": "Loans",
+  			"label": "",
+  			"labelData": "$45,000",
+  			"tag": "Total Pay Advance",
+  			"subtext": ""
+  		}
+  	]
+  },
+  "savings": {
+  	"json": [
+  		{
+  			"title": "Savings",
+  			"label": "",
+  			"labelData": "$68,400",
+  			"tag": "",
+  			"subtext": "Total of 6 Savings"	
+  		}
+  	]
+  },
   "profile": { "name": "typicode" }
 }

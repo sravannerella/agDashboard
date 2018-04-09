@@ -21,6 +21,9 @@ import { EmployeesService } from './providers/employees/employees.service';
 import { ExpensesService } from './providers/expenses/expenses.service';
 import { InvoiceService } from './providers/invoices/invoice.service';
 import { HrrequestService } from './providers/hrrequest/hrrequest.service';
+import { PlanUsageService } from './providers/plan-usage/plan-usage.service';
+import { LoansService } from './providers/loans/loans.service';
+import { SavingsService } from './providers/savings/savings.service';
 
 
 @NgModule({
@@ -43,7 +46,7 @@ import { HrrequestService } from './providers/hrrequest/hrrequest.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService],
+  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService, PlanUsageService, LoansService, SavingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
