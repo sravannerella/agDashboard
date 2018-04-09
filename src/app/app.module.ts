@@ -24,7 +24,9 @@ import { HrrequestService } from './providers/hrrequest/hrrequest.service';
 import { PlanUsageService } from './providers/plan-usage/plan-usage.service';
 import { LoansService } from './providers/loans/loans.service';
 import { SavingsService } from './providers/savings/savings.service';
-
+import { PayrollService } from './providers/payroll/payroll.service';
+import { TodosService } from './providers/todoList/todos.service';
+import { RecentActivityService } from './providers/recentActivity/recent-activity.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { SavingsService } from './providers/savings/savings.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService, PlanUsageService, LoansService, SavingsService],
+  providers: [EmployeesService, ExpensesService, InvoiceService, HrrequestService, PlanUsageService, LoansService, SavingsService, PayrollService, TodosService, RecentActivityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
