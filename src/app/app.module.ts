@@ -17,7 +17,6 @@ import { ExpensesComponent } from './expenses/expenses.component';
 import { SavingsComponent } from './savings/savings.component';
 import { LoansComponent } from './loans/loans.component';
 import { EmployeesService } from './providers/employees.service';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -39,7 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     HttpClientModule
   ],
   providers: [EmployeesService],

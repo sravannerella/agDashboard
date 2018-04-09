@@ -1,13 +1,22 @@
 {
-  "employees": [
-    { 
-    	"title": "Employees",
-    	"label": "Total Employees",
-    	"labelData": "150",
-    	"tag" : "This Week",
-    	"subText": "April 9"
-    }
-  ],
+  "employees": {
+	  "json":	[
+	    { 
+	    	"title": "Employees",
+	    	"label": "Total Employees",
+	    	"labelData": "150",
+	    	"tag" : "This Week",
+	    	"subtext": "April 9"
+	    },
+	    { 
+	    	"title": "Employees2",
+	    	"label": "Total Employees2",
+	    	"labelData": "1502",
+	    	"tag" : "This Week2",
+	    	"subtext": "April 10"
+	    }
+	  ]
+  },
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],

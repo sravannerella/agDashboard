@@ -11,6 +11,11 @@ export class CardComponent {
     @Input() mode;
     currentIndex = 0;
 
+    public jsonToClass(data) {
+      console.log('JSON TO CLASS', data, typeof(data));
+      return new Card(data.title, data.label, data.labelData, data.tag, data.subtext);
+    }
+
     next(index) {
       if (this.card.length === (index + 1) ) {
         this.currentIndex = 0;

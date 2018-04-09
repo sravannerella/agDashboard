@@ -14,9 +14,12 @@ export class EmployeesComponent extends CardComponent {
       super();
 
       this.employeeService.getEmployee().subscribe(data => {
-        console.log(data);
-        // this.card.push(data);
+        if (data.hasOwnProperty('json') ) {
+          const jsonData = data['json'];
+          jsonData.map(item => {
+            this.card.push(this.jsonToClass(item));
+          });
+        }
       });
-      // this.card.push(new Card('Employees', 'Total', '142', 'This Month', '19%') );
     }
 }
