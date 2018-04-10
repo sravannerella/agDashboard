@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as c3 from 'c3';
-import { PayrollService } from '../providers/payroll/payroll.service';
+import { PayrollService } from '../../providers/payroll/payroll.service';
 
 @Component({
   selector: 'app-payroll-information',

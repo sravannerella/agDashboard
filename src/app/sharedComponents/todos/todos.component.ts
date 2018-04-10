@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodosService } from '../providers/todoList/todos.service';
+import { TodosService } from '../../providers/todoList/todos.service';
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecentActivityService } from '../providers/recentActivity/recent-activity.service';
+import { RecentActivityService } from '../../providers/recentActivity/recent-activity.service';
 
 @Component({
   selector: 'app-recent-activity',
