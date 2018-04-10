@@ -1,130 +1,215 @@
 {
-  "dashboard": {
-    "company": {
-		"available": true,
-      	"order": [1, 3, 4, 2, 10, 7, 8, 9]
-	},
-	"mydash": {
-		"available" : false,
-		"order": [1, 2, 3, 4]
-	}
-  },
-  "employees": {
-	  "json": [
-	    { 
-	    	"title": "Employees",
-	    	"label": "Total Employees",
-	    	"labelData": "150",
-	    	"tag" : "This Week",
-	    	"subtext": "April 9"
-	    },
-	    { 
-	    	"title": "Employees2",
-	    	"label": "Total Employees2",
-	    	"labelData": "1502",
-	    	"tag" : "This Week2",
-	    	"subtext": "April 10"
-	    }
-	  ]
-  },
-  "expenses": {
-  	"json": [
-  		{ 
-	    	"title": "Expenses",
-	    	"label": "Total Expenses",
-	    	"labelData": "$12,000",
-	    	"tag" : "This Week",
-	    	"subtext": "20%"
-	    }
-  	]
-  },
-  "invoices": {
-  	"json": [
-  		{
-  			"title": "Invoices",
-  			"label": "Total Due",
-  			"labelData": "$12,000.12",
-  			"tag": "This Month",
-  			"subtext": "April 9"
-  		}
-  	]
-  },
-  "hrrequests": {
-  	"json": [
-  		{
-  			"title": "HR Requests",
-  			"label": "Open",
-  			"labelData": "6",
-  			"tag": "This Month",
-  			"subtext": "April 9"	
-  		}
-  	]
-  },
-  "planusage" : {
-  	"json": [
-  		{
-  			"title": "Plan Usage",
-  			"label": "",
-  			"labelData": "65%",
-  			"tag": "",
-  			"subtext": "Standard"
-  		}
-  	]
-  },
-  "loans": {
-  	"json": [
-  		{
-  			"title": "Loans",
-  			"label": "",
-  			"labelData": "$45,000",
-  			"tag": "Total Pay Advance",
-  			"subtext": ""
-  		}
-  	]
-  },
-  "consultants":{
-	"json": [
-		{
-			"title": "Consultants",
-  			"label": "Total",
-  			"labelData": "20",
-  			"tag": "This Month",
-  			"subtext": ""
-		}
-	]
-  },
-  "timesheets": {
-	  "json": [
-		{
-			"title": "Timesheets",
-  			"label": "Total",
-  			"labelData": "54",
-  			"tag": "This Month",
-  			"subtext": ""
-		}
-	  ]
-  },
-  "leaves": {
-	"json": [
-		{
-			"title": "Leave Requests",
-  			"label": "Total",
-  			"labelData": "10",
-  			"tag": "Open",
-  			"subtext": ""
-		}
-	]
-  },
-  "savings": {
-  	"json": [
-  		{
-  			"title": "Savings",
-  			"label": "",
-  			"labelData": "$68,400",
-  			"tag": "",
-  			"subtext": "Total of 6 Savings"	
-  		}
-  	]
-  },
-  "profile": { "name": "typicode" }
+    "dashboard": {
+        "company": {
+            "available": true,
+            "order": [1, 3, 4, 2, 10, 7, 8, 9]
+        },
+        "mydash": {
+            "available": false,
+            "order": [1, 2, 3, 4]
+        }
+    },
+    "employees": {
+        "json": [{
+                "title": "Employees",
+                "label": "Total Employees",
+                "labelData": "150",
+                "tag": "This Week",
+                "subtext": "April 9"
+            },
+            {
+                "title": "Employees2",
+                "label": "Total Employees2",
+                "labelData": "1502",
+                "tag": "This Week2",
+                "subtext": "April 10"
+            }
+        ]
+    },
+    "expenses": {
+        "json": [{
+            "title": "Expenses",
+            "label": "Total Expenses",
+            "labelData": "$12,000",
+            "tag": "This Week",
+            "subtext": "20%"
+        }]
+    },
+    "invoices": {
+        "json": [{
+            "title": "Invoices",
+            "label": "Total Due",
+            "labelData": "$12,000.12",
+            "tag": "This Month",
+            "subtext": "April 9"
+        }]
+    },
+    "hrrequests": {
+        "json": [{
+            "title": "HR Requests",
+            "label": "Open",
+            "labelData": "6",
+            "tag": "This Month",
+            "subtext": "April 9"
+        }]
+    },
+    "planusage": {
+        "json": [{
+            "title": "Plan Usage",
+            "label": "",
+            "labelData": "65%",
+            "tag": "",
+            "subtext": "Standard"
+        }]
+    },
+    "loans": {
+        "json": [{
+            "title": "Loans",
+            "label": "",
+            "labelData": "$45,000",
+            "tag": "Total Pay Advance",
+            "subtext": ""
+        }]
+    },
+    "consultants": {
+        "json": [{
+            "title": "Consultants",
+            "label": "Total",
+            "labelData": "20",
+            "tag": "This Month",
+            "subtext": ""
+        }]
+    },
+    "timesheets": {
+        "json": [{
+            "title": "Timesheets",
+            "label": "Total",
+            "labelData": "54",
+            "tag": "This Month",
+            "subtext": ""
+        }]
+    },
+    "leaves": {
+        "json": [{
+            "title": "Leave Requests",
+            "label": "Total",
+            "labelData": "10",
+            "tag": "Open",
+            "subtext": ""
+        }]
+    },
+    "savings": {
+        "json": [{
+            "title": "Savings",
+            "label": "",
+            "labelData": "$68,400",
+            "tag": "",
+            "subtext": "Total of 6 Savings"
+        }]
+    },
+    "payroll": [{
+            "amt_desc": "Net Amount",
+            "amt_value": "$12,37,897"
+        },
+        {
+            "amt_desc": "TDS",
+            "amt_value": "$12,37,897"
+        },
+        {
+            "amt_desc": "Loans/Advances",
+            "amt_value": "$12,37,897"
+        },
+        {
+            "amt_desc": "Loss of Pay",
+            "amt_value": "$12,37,897"
+        },
+        {
+            "amt_desc": "Other",
+            "amt_value": "$12,37,897"
+        },
+        {
+            "amt_desc": "Total",
+            "amt_value": "$14,37,897"
+        }
+    ],
+    "batchSummary": [{
+            "batch_desc": "Full Time Batch",
+            "batch_value": "$12,34,56,789",
+            "width": "70"
+        },
+        {
+
+            "batch_desc": "Full Time Batch",
+            "batch_value": "$12,34,56,789",
+
+            "width": "40"
+        },
+        {
+            "batch_desc": "Part Time Batch",
+            "batch_value": "$12,34,56,789",
+            "width": "70"
+        },
+        {
+            "batch_desc": "Part Time Batch",
+            "batch_value": "$12,34,56,789",
+            "width": "90"
+        }
+    ],
+
+    "recentData": [{
+            "imgsrc": "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
+            "name": "John",
+            "task": "Created Timesheets",
+            "time": "4/5/2018"
+        },
+        {
+            "imgsrc": "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
+            "name": "John",
+            "task": "Created Timesheets",
+            "time": "4/5/2018"
+        },
+        {
+            "imgsrc": "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
+            "name": "John",
+            "task": "Created Timesheets",
+            "time": "4/5/2018"
+        }
+    ],
+    "todos": [{
+            "icon": "fa fa-calendar",
+            "title": "THIS IS TITLE1",
+            "status": "Pending Approval",
+            "submittedBy": "TEST",
+            "time": "Moments ago"
+        },
+        {
+            "icon": "fa fa-calendar",
+            "title": "THIS IS TITLE",
+            "status": "Pending Approval",
+            "submittedBy": "TEST",
+            "time": "Moments ago"
+        },
+        {
+            "icon": "fa fa-calendar",
+            "title": "THIS IS TITLE2",
+            "status": "Pending Approval",
+            "submittedBy": "TEST",
+            "time": "Moments ago"
+        },
+        {
+            "icon": "fa fa-calendar",
+            "title": "THIS IS TITLE3",
+            "status": "Pending Approval",
+            "submittedBy": "TEST",
+            "time": "Moments ago"
+        },
+        {
+            "icon": "fa fa-calendar",
+            "title": "THIS IS TITLE4",
+            "status": "Pending Approval",
+            "submittedBy": "TEST",
+            "time": "Moments ago"
+        }
+
+    ]
 }

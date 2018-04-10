@@ -11,10 +11,8 @@ export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummary: any;
    batchSummary: any;
-  color:any;
+   color:any;
 
-   
- 
   constructor(private payrollService: PayrollService) {
 
     this.getPayrollSummary();
