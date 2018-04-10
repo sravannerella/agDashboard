@@ -15,6 +15,10 @@ import { HrrequestService } from './providers/hrrequest/hrrequest.service';
 import { PlanUsageService } from './providers/plan-usage/plan-usage.service';
 import { LoansService } from './providers/loans/loans.service';
 import { SavingsService } from './providers/savings/savings.service';
+
+import { PayrollService } from './providers/payroll/payroll.service';
+import { TodosService } from './providers/todoList/todos.service';
+import { RecentActivityService } from './providers/recentActivity/recent-activity.service';
 import { PayrollInformationComponent } from './payroll-information/payroll-information.component';
 import { DashboardService } from './providers/dashboard/dashboard.service';
 import { TimesheetsService } from './providers/timesheets/timesheets.service';
@@ -45,7 +49,10 @@ import { LeaveRequestsService } from './providers/leave-requests/leave-requests.
     LeaveRequestsService,
     LoansService,
     SavingsService,
-    TimesheetsService
+    TimesheetsService,
+    PayrollService, 
+    TodosService,
+    RecentActivityService
   ],
   bootstrap: [AppComponent]
 })

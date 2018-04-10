@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as c3 from 'c3';
+import { PayrollService } from '../providers/payroll/payroll.service';
 
 @Component({
   selector: 'app-payroll-information',
@@ -10,55 +11,37 @@ export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummary: any;
    batchSummary: any;
+  color:any;
 
-  constructor() {
-    this.payrollSummary = [{
-      'amt_desc': 'Net Amount',
-      'amt_value': '$12,37,897'
+   
+ 
+  constructor(private payrollService: PayrollService) {
+
+    this.getPayrollSummary();
+    this.getBatchSummary();
+    this.color = ['#69b23b', '#2c4b19', '#777', '#93d37c', '#444'];
+
+  }
+
+  getPayrollSummary() {
+    this.payrollService.getPayrollSummary().subscribe(res => {
+      console.log(res);
+      this.payrollSummary = res;
+
     },
-      {
-        'amt_desc': 'TDS',
-        'amt_value': '$12,37,897'
-      },
-      {
-        'amt_desc': 'Loans/Advances',
-        'amt_value': '$12,37,897'
-      },
-      {
-        'amt_desc': 'Loss of Pay',
-        'amt_value': '$12,37,897'
-      },
-      {
-        'amt_desc': 'Other',
-        'amt_value': '$12,37,897'
-      },
-      {
-        'amt_desc': 'Total',
-        'amt_value': '$14,37,897'
-      }
+      error => {
+        console.log(error)
+      })
+  }
 
-    ];
-
-    this.batchSummary = [{
-      'batch_desc': 'Full Time Batch',
-      'batch_value': '$12,34,56,789',
-      'width': '70'
+  getBatchSummary() {
+    this.payrollService.getBatchSummary().subscribe(res => {
+      console.log(res);
+      this.batchSummary = res;
     },
-      {
-        'batch_desc': 'Full Time Batch',
-        'batch_value': '$12,34,56,789',
-        'width': '40'
-      },
-      {
-        'batch_desc': 'Part Time Batch',
-        'batch_value': '$12,34,56,789',
-        'width': '70'
-      },
-      {
-        'batch_desc': 'Part Time Batch',
-        'batch_value': '$12,34,56,789',
-        'width': '90'
-      }];
+      error => {
+        console.log(error)
+      })
   }
 
   ngAfterViewInit() {
