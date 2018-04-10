@@ -12,7 +12,13 @@ export class PayrollInformationComponent implements AfterViewInit {
    payrollSummary: any;
    batchSummary: any;
    color:any;
-
+   result:any;
+   val1:any;
+   val2:any;
+   percent:any;
+   width: PayrollInformationComponent[]=[];
+  array1: PayrollInformationComponent[] = [];
+   
   constructor(private payrollService: PayrollService) {
 
     this.getPayrollSummary();
@@ -23,19 +29,40 @@ export class PayrollInformationComponent implements AfterViewInit {
 
   getPayrollSummary() {
     this.payrollService.getPayrollSummary().subscribe(res => {
-      console.log(res);
-      this.payrollSummary = res;
-
+      // console.log(res[1]);
+      // console.log(Object.values(res[res.length - 1]));
+      this.result = Object.values(res[res.length - 1]);
+      console.log(this.result[0]);
+      this.payrollSummary = this.result[0] ;
     },
       error => {
         console.log(error)
       })
   }
 
+
+  getSum(total, num) {
+  return total + num;
+}
   getBatchSummary() {
     this.payrollService.getBatchSummary().subscribe(res => {
-      console.log(res);
-      this.batchSummary = res;
+       this.batchSummary = res;
+       console.log(this.batchSummary);
+       console.log(this.payrollSummary);
+
+      for (let x of this.batchSummary) {
+       this.val1 = parseInt(x.batch_value);
+      this.array1.push(this.val1);
+        console.log(this.array1);
+      }
+     
+      for(let x of this.batchSummary){
+      this.val1 = parseInt(x.batch_value);
+      this.val2 = this.array1.reduce(this.getSum);
+      this.percent=(this.val1/this.val2)*100;
+      this.width.push(this.percent);
+      }
+      console.log(this.width);
     },
       error => {
         console.log(error)

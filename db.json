@@ -108,51 +108,187 @@
         }]
     },
     "payroll": [{
-            "amt_desc": "Net Amount",
-            "amt_value": "$12,37,897"
+            "april": [{
+                    "amt_desc": "Net Amount",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "TDS",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advances",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Pay",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "$14,37,897"
+                }
+            ]
         },
         {
-            "amt_desc": "TDS",
-            "amt_value": "$12,37,897"
+            "may": [{
+                    "amt_desc": "Net Amount",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "TDS",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advances",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Pay",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "$14,37,897"
+                }
+            ]
         },
         {
-            "amt_desc": "Loans/Advances",
-            "amt_value": "$12,37,897"
+            "june": [{
+                    "amt_desc": "Net Amount",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "TDS",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advances",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Pay",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "$14,37,897"
+                }
+            ]
         },
         {
-            "amt_desc": "Loss of Pay",
-            "amt_value": "$12,37,897"
+            "july": [{
+                    "amt_desc": "Net Amount",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "TDS",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advances",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Pay",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "$14,37,897"
+                }
+            ]
         },
         {
-            "amt_desc": "Other",
-            "amt_value": "$12,37,897"
+            "aug": [{
+                    "amt_desc": "Net Amount",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "TDS",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advances",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Pay",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "$12,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "$14,37,897"
+                }
+            ]
         },
         {
-            "amt_desc": "Total",
-            "amt_value": "$14,37,897"
+            "sept": [{
+                    "amt_desc": "Net Amountss",
+                    "amt_value": "11,37,897"
+                },
+                {
+                    "amt_desc": "TDSss",
+                    "amt_value": "6,37,897"
+                },
+                {
+                    "amt_desc": "Loans/Advancesss",
+                    "amt_value": "9,37,897"
+                },
+                {
+                    "amt_desc": "Loss of Payss",
+                    "amt_value": "10,37,897"
+                },
+                {
+                    "amt_desc": "Other",
+                    "amt_value": "3,37,897"
+                },
+                {
+                    "amt_desc": "Total",
+                    "amt_value": "14,37,897"
+                }
+            ]
         }
     ],
+
     "batchSummary": [{
             "batch_desc": "Full Time Batch",
-            "batch_value": "$12,34,56,789",
-            "width": "70"
+            "batch_value": "10,56,789"
         },
         {
 
             "batch_desc": "Full Time Batch",
-            "batch_value": "$12,34,56,789",
+            "batch_value": "9,56,789"
 
-            "width": "40"
         },
         {
             "batch_desc": "Part Time Batch",
-            "batch_value": "$12,34,56,789",
-            "width": "70"
+            "batch_value": "3,56,789"
         },
         {
             "batch_desc": "Part Time Batch",
-            "batch_value": "$12,34,56,789",
-            "width": "90"
+            "batch_value": "8,56,789"
+
         }
     ],
 
