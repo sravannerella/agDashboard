@@ -1,58 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { RecentActivityComponent } from './recent-activity/recent-activity.component';
-import { TodosComponent } from './todos/todos.component';
-import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeesService } from './providers/employees/employees.service';
-import { ExpensesService } from './providers/expenses/expenses.service';
-import { InvoiceService } from './providers/invoices/invoice.service';
-import { HrrequestService } from './providers/hrrequest/hrrequest.service';
-import { PlanUsageService } from './providers/plan-usage/plan-usage.service';
-import { LoansService } from './providers/loans/loans.service';
-import { SavingsService } from './providers/savings/savings.service';
 
-import { PayrollService } from './providers/payroll/payroll.service';
-import { TodosService } from './providers/todoList/todos.service';
-import { RecentActivityService } from './providers/recentActivity/recent-activity.service';
-import { PayrollInformationComponent } from './payroll-information/payroll-information.component';
-import { DashboardService } from './providers/dashboard/dashboard.service';
-import { TimesheetsService } from './providers/timesheets/timesheets.service';
-import { ConsultantsService } from './providers/consultants/consultants.service';
-import { LeaveRequestsService } from './providers/leave-requests/leave-requests.service';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
+const appRoutes: Routes = [
+  {
+    path: 'dashboard',
+    loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
+  }
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RecentActivityComponent,
-    TodosComponent,
-    PayrollInformationComponent,
-    CardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
-  ],
-  providers: [
-    ConsultantsService,
-    DashboardService,
-    EmployeesService,
-    ExpensesService,
-    InvoiceService,
-    HrrequestService,
-    PlanUsageService,
-    LeaveRequestsService,
-    LoansService,
-    SavingsService,
-    TimesheetsService,
-    PayrollService, 
-    TodosService,
-    RecentActivityService
+    HttpClientModule,
+    DashboardModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   bootstrap: [AppComponent]
 })
