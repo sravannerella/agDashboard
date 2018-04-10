@@ -1,5 +1,5 @@
 <div class="row bodyBlock">
-    <app-card *ngFor="let card of cards" [card]='card' [mode]='"md"'></app-card>
+    <app-card *ngFor="let card of cards; let i = index;" [card]='card' [mode]='( (cards.length > 6) && (i%4===2 || i%4 === 3) ) ? "sm" : "md"'></app-card>
 </div>
 <app-payroll-information></app-payroll-information>
 <div class="row bodyBlock">

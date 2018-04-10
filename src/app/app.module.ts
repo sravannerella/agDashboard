@@ -17,6 +17,9 @@ import { LoansService } from './providers/loans/loans.service';
 import { SavingsService } from './providers/savings/savings.service';
 import { PayrollInformationComponent } from './payroll-information/payroll-information.component';
 import { DashboardService } from './providers/dashboard/dashboard.service';
+import { TimesheetsService } from './providers/timesheets/timesheets.service';
+import { ConsultantsService } from './providers/consultants/consultants.service';
+import { LeaveRequestsService } from './providers/leave-requests/leave-requests.service';
 
 
 @NgModule({
@@ -32,14 +35,17 @@ import { DashboardService } from './providers/dashboard/dashboard.service';
     HttpClientModule
   ],
   providers: [
+    ConsultantsService,
     DashboardService,
     EmployeesService,
     ExpensesService,
     InvoiceService,
     HrrequestService,
     PlanUsageService,
+    LeaveRequestsService,
     LoansService,
-    SavingsService
+    SavingsService,
+    TimesheetsService
   ],
   bootstrap: [AppComponent]
 })
