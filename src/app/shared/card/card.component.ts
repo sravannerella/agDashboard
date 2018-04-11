@@ -17,7 +17,6 @@ export class CardComponent {
       } else {
         this.currentIndex = index + 1;
       }
-      console.log(this.currentIndex, this.card.length, index);
     }
 
     previous(index) {
@@ -26,6 +25,5 @@ export class CardComponent {
       } else {
         this.currentIndex = index - 1;
       }
-      console.log(this.currentIndex, this.card.length, index);
     }
 }

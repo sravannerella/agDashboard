@@ -9,7 +9,7 @@ import { RecentActivityService } from '../../providers/recentActivity/recent-act
 export class RecentActivityComponent implements OnInit {
   recentData: any;
 
-  constructor(private recentDataService: RecentActivityService) {  
+  constructor(private recentDataService: RecentActivityService) {
   }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class RecentActivityComponent implements OnInit {
       this.recentData = res;
     },
       error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 }

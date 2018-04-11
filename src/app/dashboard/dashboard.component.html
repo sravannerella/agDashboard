@@ -2,7 +2,7 @@
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link p-3" routerLink="/companyDashboard" routerLinkActive="active">Company Dashboard</a>
+            <a class="nav-link p-3" *ngIf="showCompany" routerLink="/companyDashboard" routerLinkActive="active">Company Dashboard</a>
         </li>
 
         <li class="nav-item">

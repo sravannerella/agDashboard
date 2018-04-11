@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DashboardService } from '../../providers/dashboard/dashboard.service';
-import { Card } from '../../sharedComponents/card/card';
+import { Card } from '../../shared/card/card';
 import { EmployeesService } from '../../providers/employees/employees.service';
 import { InvoiceService } from '../../providers/invoices/invoice.service';
 import { PlanUsageService } from '../../providers/plan-usage/plan-usage.service';
@@ -17,7 +17,7 @@ import { ConsultantsService } from '../../providers/consultants/consultants.serv
   templateUrl: './company.component.html',
   styleUrls: ['./company.component.scss']
 })
-export class CompanyComponent{
+export class CompanyComponent {
   title = 'app';
   cards = [];
   serviceCards = [];
@@ -37,35 +37,35 @@ export class CompanyComponent{
     private consultantService: ConsultantsService) {
 
     this.dashboardService.getOrder().subscribe(data => {
-      const order = data['company'].order;
-      console.log(order);
+        const order = data['company'].order;
 
-      order.map(num => {
-        if (num === 1) {
-          this.service = this.employeeService.getEmployee();
-        } else if (num === 2) {
-          this.service = this.consultantService.getConsultants();
-        } else if (num === 3) {
-          this.service = this.invoiceService.getInvoices();
-        } else if (num === 4) {
-          this.service = this.planService.getPlanUsage();
-        } else if (num === 5) {
-          this.service = this.hrService.getHrRequests();
-        } else if (num === 6) {
-          this.service = this.expenseService.getExpenses();
-        } else if (num === 7) {
-          this.service = this.savingService.getSavings();
-        } else if (num === 8) {
-          this.service = this.loanService.getLoans();
-        } else if (num === 9) {
-          this.service = this.timesheetService.getTimesheets();
-        } else if (num === 10) {
-          this.service = this.leaveService.getLeaves();
-        }
+        order.map(num => {
+            if (num === 1) {
+                this.service = this.employeeService.getEmployee();
+            } else if (num === 2) {
+                this.service = this.consultantService.getConsultants();
+            } else if (num === 3) {
+                this.service = this.invoiceService.getInvoices();
+            } else if (num === 4) {
+                this.service = this.planService.getPlanUsage();
+            } else if (num === 5) {
+                this.service = this.hrService.getHrRequests();
+            } else if (num === 6) {
+                this.service = this.expenseService.getExpenses();
+            } else if (num === 7) {
+                this.service = this.savingService.getSavings();
+            } else if (num === 8) {
+                this.service = this.loanService.getLoans();
+            } else if (num === 9) {
+                this.service = this.timesheetService.getTimesheets();
+            } else if (num === 10) {
+                this.service = this.leaveService.getLeaves();
+            }
 
-        this.subscribe(this.service);
-      });
+            this.subscribe(this.service);
+        });
     });
+
   }
 
   public jsonToClass(data) {
