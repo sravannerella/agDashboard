@@ -27,9 +27,9 @@
                                 <small class="small">Submitted by {{todo.submittedBy}}</small>
                             </div>
                             <div class="text-muted pull-right">
-                                <small class="small">
-										<i class="fa fa-clock-o" aria-hidden="true"></i>{{todo.time}}
-									</small>
+                                <small class="small" *ngIf="todo.time !== ''">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>{{todo.time}}
+                                </small>
                             </div>
                         </div>
                     </div>

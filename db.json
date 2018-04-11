@@ -212,39 +212,39 @@
         }
     ],
     "todos": [{
-            "icon": "fa fa-calendar",
-            "title": "THIS IS TITLE1",
+            "category": "Timesheet",
+            "title": "Timesheet",
             "status": "Pending Approval",
             "submittedBy": "TEST",
             "time": "Moments ago"
         },
         {
-            "icon": "fa fa-calendar",
-            "title": "THIS IS TITLE",
+            "category": "Request",
+            "title": "Address Change",
             "status": "Pending Approval",
             "submittedBy": "TEST",
             "time": "Moments ago"
         },
         {
-            "icon": "fa fa-calendar",
-            "title": "THIS IS TITLE2",
+            "category": "Savings",
+            "title": "Savings",
             "status": "Pending Approval",
             "submittedBy": "TEST",
             "time": "Moments ago"
         },
         {
-            "icon": "fa fa-calendar",
-            "title": "THIS IS TITLE3",
+            "category": "Stubs",
+            "title": "Payroll Stubs",
             "status": "Pending Approval",
             "submittedBy": "TEST",
-            "time": "Moments ago"
+            "time": ""
         },
         {
-            "icon": "fa fa-calendar",
-            "title": "THIS IS TITLE4",
+            "category": "Request",
+            "title": "Release Paystubs",
             "status": "Pending Approval",
             "submittedBy": "TEST",
-            "time": "Moments ago"
+            "time": ""
         }
     ]
 }

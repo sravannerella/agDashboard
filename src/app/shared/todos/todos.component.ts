@@ -16,13 +16,28 @@ export class TodosComponent implements OnInit {
   }
 
   getTodoList() {
-    this.todoService.getTodoList().subscribe(res => {
-      // console.log(res);
-     this.todos = res;
-    },
-      error => {
-        console.log(error)
-      })
+
+    this.todoService.getTodoList().subscribe(resp => {
+
+      resp.map(res => {
+        if (res.category === 'Timesheet') {
+          res.icon = 'fa fa-calendar';
+        } else if (res.category === 'Request') {
+          res.icon = 'fa fa-briefcase';
+        } else if (res.category === 'Savings') {
+          res.icon = 'fa fa-inr';
+        } else if (res.category === 'Stubs') {
+          res.icon = 'fa fa-files-o';
+        }
+      });
+
+      console.log(resp);
+
+      this.todos = resp;
+      }, error => {
+        console.log(error);
+    });
+
   }
 
 }
