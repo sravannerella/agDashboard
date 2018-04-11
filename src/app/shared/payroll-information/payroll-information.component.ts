@@ -62,8 +62,8 @@ export class PayrollInformationComponent implements AfterViewInit {
       });
     },
       error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   getBatchTotal(total, num) {
@@ -84,8 +84,8 @@ export class PayrollInformationComponent implements AfterViewInit {
       }
     },
       error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   ngAfterViewInit() {
