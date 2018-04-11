@@ -28,15 +28,8 @@
                 "title": "Employees",
                 "label": "Total Employees",
                 "labelData": "150",
-                "tag": "This Week",
+                "tag": "",
                 "subtext": "April 9"
-            },
-            {
-                "title": "Employees2",
-                "label": "Total Employees2",
-                "labelData": "1502",
-                "tag": "This Week2",
-                "subtext": "April 10"
             }
         ]
     },
@@ -52,8 +45,14 @@
     "invoices": {
         "json": [{
             "title": "Invoices",
-            "label": "Total Due",
+            "label": "Due",
             "labelData": "$12,000.12",
+            "tag": "Total",
+            "subtext": "April 9"
+        }, {
+            "title": "Invoices",
+            "label": "Paid",
+            "labelData": "$11,000.12",
             "tag": "This Month",
             "subtext": "April 9"
         }]
@@ -81,7 +80,7 @@
             "title": "Loans",
             "label": "",
             "labelData": "$45,000",
-            "tag": "Total Pay Advance",
+            "tag": "Total",
             "subtext": ""
         }]
     },
@@ -90,7 +89,7 @@
             "title": "Consultants",
             "label": "Total",
             "labelData": "20",
-            "tag": "This Month",
+            "tag": "",
             "subtext": ""
         }]
     },
@@ -192,7 +191,8 @@
             "batch_value": "200"
         }
     ],
-    "recentData": [{
+    "recentData": [
+        {
             "imgsrc": "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
             "name": "John",
             "task": "Created Timesheets",
