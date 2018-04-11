@@ -38,7 +38,7 @@ export class CompanyComponent{
 
     this.dashboardService.getOrder().subscribe(data => {
       const order = data['company'].order;
-      console.log(order);
+      // console.log(order);
 
       order.map(num => {
         if (num === 1) {

@@ -4,9 +4,7 @@
             <div class="insights">
                 <div>
                     <h5 class="category pull-left">Payroll Information</h5>
-                    <div class="sub tag text-muted pull-right">
-                        <small class="small">This Month</small>
-                    </div>
+
                 </div>
                 <div>
                     <div class="col-xs-12 col-sm-5">
@@ -14,13 +12,22 @@
                     </div>
                     <div class="col-xs-6 col-sm-4 payroll_info_list">
                         <h4 class="label">Payroll Summary</h4>
+                        <div class="sub tag text-muted pull-right">
+                            <small class="small">This Month</small>
+                        </div>
                         <div class="scroll_div">
                             <ul class="scrollable_list">
-                                <li *ngFor="let x of payrollSummary; let i = index;" class="text-muted small">
-                                    <small class="small">{{x.amt_desc}}</small>
-                                    <small class="small rightAlign_Value">{{x.amt_value}}
+                                <li *ngFor="let x of payrollSummarylabel; let i = index;" class="text-muted small">
+                                    <small class="small">{{payrollSummarylabel[i]}}</small>
+                                    <small class="small rightAlign_Value">{{payrollSummaryvalue[i]}}
                                             </small>
                                 </li>
+                                <li class="text-muted small">
+                                    <small class="small">Gross Total</small>
+                                    <small class="small rightAlign_Value">{{payrollTotal}}
+                                            </small>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
