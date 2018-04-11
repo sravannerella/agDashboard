@@ -122,7 +122,7 @@
     },
     "payroll": {
         "total": 4000,
-        "size": 6,
+        "size": 5,
         "months": [
             "Apr",
             "May",
