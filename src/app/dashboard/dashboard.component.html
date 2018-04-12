@@ -8,15 +8,29 @@
     </div>
     <div class="col col-xs-12">
         <div class="insights">
-            <ul class="nav nav-pills dashboard_view">
+            <ngb-tabset>
+                <ngb-tab *ngIf="showCompany" title="Company Dashboard">
+                    <ng-template ngbTabContent>
+                        <app-company></app-company>
+                    </ng-template>
+                </ngb-tab>
+
+                <ngb-tab *ngIf="showMydash" title="My Dashboard">
+                    <ng-template ngbTabContent>
+                        <app-mydashboard></app-mydashboard>
+                    </ng-template>
+                </ngb-tab>
+
+            </ngb-tabset>
+            <!-- <ul class="nav nav-pills dashboard_view">
                 <li>
-                    <a *ngIf="showCompany" routerLink="/company" routerLinkActive="router-link-active">Company Dashboard</a>
+                    <a *ngIf="showCompany" href="/company">Company Dashboard</a>
                 </li>
 
                 <li>
-                    <a *ngIf="showMydash" routerLink="/myDashboard" routerLinkActive="router-link-active">My Dashboard</a>
+                    <a *ngIf="showMydash" href="/myDashboard">My Dashboard</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </div>

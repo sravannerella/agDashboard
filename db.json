@@ -25,13 +25,12 @@
     },
     "employees": {
         "json": [{
-                "title": "Employees",
-                "label": "Total Employees",
-                "labelData": "150",
-                "tag": "",
-                "subtext": "April 9"
-            }
-        ]
+            "title": "Employees",
+            "label": "Total Employees",
+            "labelData": "150",
+            "tag": "",
+            "subtext": "April 9"
+        }]
     },
     "expenses": {
         "json": [{
@@ -43,8 +42,7 @@
         }]
     },
     "invoices": {
-        "json": [
-            {
+        "json": [{
             "title": "Invoices",
             "label": "Due",
             "labelData": "$12,000.12",
@@ -192,8 +190,7 @@
             "batch_value": "200"
         }
     ],
-    "recentData": [
-        {
+    "recentData": [{
             "imgsrc": "http://www.kvklawyers.com/wp-content/uploads/2018/03/placeholder.jpg",
             "name": "John",
             "task": "Created Timesheets",

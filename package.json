@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^2.0.0-alpha.0",
     "@types/c3": "^0.5.0",
     "bootstrap": "^3.3.7",
     "c3": "^0.5.2",

@@ -1,7 +1,7 @@
     /* You can add global styles to this file, and also import other style files */
     
     @import '~bootstrap/dist/css/bootstrap.min.css';
-    .bodyBlock .dashboard_view>li>a {
+    .bodyBlock .insights .nav-tabs>li>a {
         background-color: #ffff;
         color: #444;
         border-radius: 0px;
@@ -9,21 +9,19 @@
         font-size: 18px;
     }
     
-    // .bodyBlock .dashboard_view>li.active>a {
-    //     border-bottom: 4px solid #69b23b;
-    //     background-color: #ffff;
-    //     color: #444;
-    //     border-radius: 0px;
-    //     padding: 10px 15px;
-    //     font-size: 18px;
-    // }
-    .router-link-active {
+    .bodyBlock .insights .nav-tabs>li>a.active,
+    {
         border-bottom: 4px solid #69b23b;
         background-color: #ffff;
         color: #444;
         border-radius: 0px;
         padding: 10px 15px;
         font-size: 18px;
+    }
+    
+    .bodyBlock .insights .nav-tabs>li>a:hover {
+        background-color: #fff;
+        border-color: #fff;
     }
     
     .bodyBlock .insights {

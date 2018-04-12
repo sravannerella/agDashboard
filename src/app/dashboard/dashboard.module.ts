@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { RecentActivityComponent } from '../shared/recent-activity/recent-activity.component';
 import { TodosComponent } from '../shared/todos/todos.component';
@@ -30,9 +29,10 @@ import { MydashboardComponent } from './mydashboard/mydashboard.component';
 import { AuthGuard } from './auth.guard';
 
 
+
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     component: DashboardComponent,
     children: [
       {
@@ -45,9 +45,9 @@ const routes: Routes = [
         component: MydashboardComponent
       },
       {
-        path: '',
+        path: '**',
         pathMatch: 'full',
-        redirectTo: 'myDashboard'
+        redirectTo: 'dashboard'
       }
     ]
   },
@@ -56,6 +56,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    NgbModule.forRoot(),
     RouterModule.forChild(routes)
   ],
   providers: [
