@@ -18,7 +18,7 @@ import { ConsultantsService } from '../../providers/consultants/consultants.serv
   templateUrl: './mydashboard.component.html',
   styleUrls: ['./mydashboard.component.scss']
 })
-export class MydashboardComponent implements OnInit {
+export class MydashboardComponent {
   title = 'app';
   cards = [];
   serviceCards = [];
@@ -38,7 +38,7 @@ export class MydashboardComponent implements OnInit {
     private consultantService: ConsultantsService) {
 
     this.dashboardService.getOrder().subscribe(data => {
-      const order = data['company'].order;
+      const order = data['mydash'].order;
 
       order.map(num => {
         if (num === 1) {

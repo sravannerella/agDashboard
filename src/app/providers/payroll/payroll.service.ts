@@ -8,14 +8,14 @@ import { env } from '../../env';
 export class PayrollService {
 
   constructor(private http: HttpClient) { }
-  
+
   getPayrollSummary(): any {
     const url = env.apiURL + 'payroll';
-    return this.http.get(url)
+    return this.http.get(url);
   }
 
   getBatchSummary(): any {
     const url = env.apiURL + 'batchSummary';
-    return this.http.get(url)
+    return this.http.get(url);
   }
 }

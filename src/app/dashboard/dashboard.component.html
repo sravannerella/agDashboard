@@ -14,7 +14,7 @@
                 </li>
 
                 <li>
-                    <a routerLink="/myDashboard" routerLinkActive="router-link-active">My Dashboard</a>
+                    <a *ngIf="showMydash" routerLink="/myDashboard" routerLinkActive="router-link-active">My Dashboard</a>
                 </li>
             </ul>
         </div>

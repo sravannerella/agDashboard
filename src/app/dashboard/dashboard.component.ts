@@ -9,11 +9,14 @@ import { DashboardService } from '../providers/dashboard/dashboard.service';
 export class DashboardComponent implements OnInit {
 
   showCompany: boolean;
+  showMydash: boolean;
+
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.dashboardService.getOrder().subscribe(data => {
       this.showCompany = data['company'].available;
+      this.showMydash = data['mydash'].available;
     });
   }
 

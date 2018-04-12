@@ -20,6 +20,7 @@ export class TodosComponent implements OnInit {
     this.todoService.getTodoList().subscribe(resp => {
 
       resp.map(res => {
+
         if (res.category === 'Timesheet') {
           res.icon = 'fa fa-calendar';
         } else if (res.category === 'Request') {

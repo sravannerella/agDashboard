@@ -10,20 +10,20 @@ import { PayrollService } from '../../providers/payroll/payroll.service';
 export class PayrollInformationComponent implements AfterViewInit {
 
    payrollSummarylabel: any;
-   payrollSummaryvalue: PayrollInformationComponent[]=[];
+   payrollSummaryvalue: PayrollInformationComponent[] = [];
    batchSummary: any;
-   color:any;
-   result:any;
-   batchVal:any;
-   batchTotal:any;
-   percent:any;
-   width: PayrollInformationComponent[]=[];
+   color: any;
+   result: any;
+   batchVal: any;
+   batchTotal: any;
+   percent: any;
+   width: PayrollInformationComponent[] = [];
    batchValArray: PayrollInformationComponent[] = [];
-   payrollTotal:any;
+   payrollTotal: any;
    payrollValue: any;
-   categoryLabel:any;
-   graphData:any;
-   payrollSummarySize:any;
+   categoryLabel: any;
+   graphData: any;
+   payrollSummarySize: any;
 
   constructor(private payrollService: PayrollService) {
     this.color = ['#69b23b', '#2c4b19', '#777', '#93d37c', '#444'];
@@ -74,14 +74,16 @@ export class PayrollInformationComponent implements AfterViewInit {
   getBatchSummary() {
     this.payrollService.getBatchSummary().subscribe(res => {
        this.batchSummary = res;
-      for (let x of this.batchSummary) {
-      this.batchVal = parseInt(x.batch_value);
-      this.batchValArray.push(this.batchVal);
+      for (const x of this.batchSummary) {
+        // tslint:disable-next-line:radix
+        this.batchVal = parseInt(x.batch_value);
+        this.batchValArray.push(this.batchVal);
       }
-      for(let x of this.batchSummary){
+      for (const x of this.batchSummary) {
+        // tslint:disable-next-line:radix
         this.batchVal = parseInt(x.batch_value);
         this.batchTotal = this.batchValArray.reduce(this.getBatchTotal);
-        this.percent=(this.batchVal/this.batchTotal)*100;
+        this.percent = (this.batchVal / this.batchTotal) * 100;
         this.width.push(this.percent);
       }
     },
@@ -93,7 +95,6 @@ export class PayrollInformationComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.getPayrollSummary();
     this.getBatchSummary();
-    
-   
   }
+
 }

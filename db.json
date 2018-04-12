@@ -14,7 +14,7 @@
             ]
         },
         "mydash": {
-            "available": false,
+            "available": true,
             "order": [
                 1,
                 2,
@@ -43,7 +43,8 @@
         }]
     },
     "invoices": {
-        "json": [{
+        "json": [
+            {
             "title": "Invoices",
             "label": "Due",
             "labelData": "$12,000.12",

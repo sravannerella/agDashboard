@@ -12,6 +12,7 @@ import { LoansService } from '../../providers/loans/loans.service';
 import { LeaveRequestsService } from '../../providers/leave-requests/leave-requests.service';
 import { TimesheetsService } from '../../providers/timesheets/timesheets.service';
 import { ConsultantsService } from '../../providers/consultants/consultants.service';
+
 @Component({
   selector: 'app-company',
   templateUrl: './company.component.html',
