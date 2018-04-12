@@ -19,7 +19,6 @@ import { ConsultantsService } from '../../providers/consultants/consultants.serv
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent {
-  title = 'app';
   cards = [];
   serviceCards = [];
   service: any;
@@ -37,7 +36,7 @@ export class CompanyComponent {
     private timesheetService: TimesheetsService,
     private consultantService: ConsultantsService) {
 
-    this.dashboardService.getOrder().subscribe(data => {
+        const data = JSON.parse(localStorage.getItem('dashboard'));
         const order = data['company'].order;
 
         order.map(num => {
@@ -65,9 +64,7 @@ export class CompanyComponent {
 
             this.subscribe(this.service);
         });
-    });
-
-  }
+    }
 
   public jsonToClass(data) {
     return new Card(data.title, data.label, data.labelData, data.tag, data.subtext);
