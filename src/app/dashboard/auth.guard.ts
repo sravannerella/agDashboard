@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
   canActivate(): Observable<boolean> {
 
     const data = JSON.parse(localStorage.getItem('dashboard'));
-    if (data !== undefined || data !== null) {
+    if (data !== undefined && data !== null) {
       return this.route(data);
     }
 

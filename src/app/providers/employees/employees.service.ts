@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
+import { BaseService } from '../base.service';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import { env } from '../../env';
 
 @Injectable()
-export class EmployeesService {
+export class EmployeesService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   public getEmployee() {
-    const url = env.apiURL + 'employees';
-    return this.http.get(url);
+    return this.makeCall('employees');
   }
 
 }

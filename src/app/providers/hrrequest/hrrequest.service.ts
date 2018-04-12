@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
+import { BaseService } from '../base.service';
 import { HttpClient } from '@angular/common/http';
-import { env } from '../../env';
 
 @Injectable()
-export class HrrequestService {
+export class HrrequestService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   public getHrRequests() {
-    const url = env.apiURL + 'hrrequests';
-    return this.http.get(url);
+    return this.makeCall('hrrequests');
   }
 
 }

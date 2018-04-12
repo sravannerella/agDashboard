@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { env } from '../../env';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from '../base.service';
 
 @Injectable()
-export class TimesheetsService {
+export class TimesheetsService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   public getTimesheets() {
-    const url = env.apiURL + 'timesheets';
-    return this.http.get(url);
+    return this.makeCall('timesheets');
   }
 
 }

@@ -3,14 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { env } from '../../env';
+import { BaseService } from '../base.service';
 
 @Injectable()
-export class RecentActivityService {
+export class RecentActivityService extends BaseService {
 
-  constructor(private http: HttpClient) { }
- 
-  getRecentActivity(): any {
-    const url = env.apiURL + 'recentData';
-    return this.http.get(url)
+  constructor(http: HttpClient) {
+    super(http);
   }
+
+  getRecentActivity(): any {
+    return this.makeCall('recentData');
+  }
+
 }

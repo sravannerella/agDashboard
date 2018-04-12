@@ -14,27 +14,27 @@ import { TimesheetsService } from '../../providers/timesheets/timesheets.service
 import { ConsultantsService } from '../../providers/consultants/consultants.service';
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html',
-  styleUrls: ['./company.component.scss']
+    selector: 'app-company',
+    templateUrl: './company.component.html',
+    styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent {
-  cards = [];
-  serviceCards = [];
-  service: any;
+    cards = [];
+    serviceCards = [];
+    service: any;
 
-  constructor(
-    private dashboardService: DashboardService,
-    private employeeService: EmployeesService,
-    private invoiceService: InvoiceService,
-    private planService: PlanUsageService,
-    private hrService: HrrequestService,
-    private expenseService: ExpensesService,
-    private savingService: SavingsService,
-    private loanService: LoansService,
-    private leaveService: LeaveRequestsService,
-    private timesheetService: TimesheetsService,
-    private consultantService: ConsultantsService) {
+    constructor(
+        private dashboardService: DashboardService,
+        private employeeService: EmployeesService,
+        private invoiceService: InvoiceService,
+        private planService: PlanUsageService,
+        private hrService: HrrequestService,
+        private expenseService: ExpensesService,
+        private savingService: SavingsService,
+        private loanService: LoansService,
+        private leaveService: LeaveRequestsService,
+        private timesheetService: TimesheetsService,
+        private consultantService: ConsultantsService) {
 
         const data = JSON.parse(localStorage.getItem('dashboard'));
         const order = data['company'].order;
@@ -66,23 +66,23 @@ export class CompanyComponent {
         });
     }
 
-  public jsonToClass(data) {
-    return new Card(data.title, data.label, data.labelData, data.tag, data.subtext);
-  }
+    public jsonToClass(data) {
+        return new Card(data.title, data.label, data.labelData, data.tag, data.subtext);
+    }
 
-  public subscribe(service) {
-    service.subscribe(data => {
-      if (data.hasOwnProperty('json')) {
-        const jsonData = data['json'];
+    public subscribe(service) {
+        service.subscribe(data => {
+            if (data.hasOwnProperty('json')) {
+                const jsonData = data['json'];
 
-        jsonData.map(item => {
-          this.serviceCards.push(this.jsonToClass(item));
+                jsonData.map(item => {
+                    this.serviceCards.push(this.jsonToClass(item));
+                });
+                this.cards.push(this.serviceCards);
+                this.serviceCards = [];
+            }
         });
-        this.cards.push(this.serviceCards);
-        this.serviceCards = [];
-      }
-    });
-  }
+    }
 
 
 }

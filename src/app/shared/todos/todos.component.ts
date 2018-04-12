@@ -31,9 +31,7 @@ export class TodosComponent implements OnInit {
           res.icon = 'fa fa-files-o';
         }
       });
-
-      console.log(resp);
-
+      
       this.todos = resp;
       }, error => {
         console.log(error);

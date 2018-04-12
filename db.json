@@ -14,7 +14,7 @@
             ]
         },
         "mydash": {
-            "available": false,
+            "available": true,
             "order": [
                 1,
                 2,

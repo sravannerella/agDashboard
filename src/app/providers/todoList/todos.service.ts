@@ -3,14 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { env } from '../../env';
+import { BaseService } from '../base.service';
 
 @Injectable()
-export class TodosService {
+export class TodosService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
-  getTodoList(): any {
-    const url = env.apiURL + 'todos';
-    return this.http.get(url)
+  getTodoList() {
+    return this.makeCall('todos');
   }
 }

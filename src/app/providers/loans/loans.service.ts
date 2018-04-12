@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { env } from '../../env';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from '../base.service';
 
 @Injectable()
-export class LoansService {
+export class LoansService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   public getLoans() {
-    const url = env.apiURL + 'loans';
-    return this.http.get(url);
+    return this.makeCall('loans');
   }
 }

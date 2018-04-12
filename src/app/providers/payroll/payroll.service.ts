@@ -3,19 +3,20 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { env } from '../../env';
+import { BaseService } from '../base.service';
 
 @Injectable()
-export class PayrollService {
+export class PayrollService extends BaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   getPayrollSummary(): any {
-    const url = env.apiURL + 'payroll';
-    return this.http.get(url);
+    return this.makeCall('payroll');
   }
 
   getBatchSummary(): any {
-    const url = env.apiURL + 'batchSummary';
-    return this.http.get(url);
+    return this.makeCall('batchSummary');
   }
 }
