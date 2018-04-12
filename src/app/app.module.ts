@@ -13,6 +13,9 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
+  }, {
+    path: '**',
+    redirectTo: 'dashboard'
   }
 ];
 

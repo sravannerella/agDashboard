@@ -21,7 +21,8 @@
     
     .bodyBlock .insights .nav-tabs>li>a:hover {
         background-color: #fff;
-        border-color: #fff;
+        border: none;
+        border-bottom: 4px solid #69b23b;
     }
     
     .bodyBlock .insights {
