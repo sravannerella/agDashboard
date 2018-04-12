@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
     this.dashboardService.getOrder().subscribe(data => {
       this.showCompany = data['company'].available;
       this.showMydash = data['mydash'].available;
+      localStorage.setItem('dashboard', JSON.stringify(data));
     });
   }
 

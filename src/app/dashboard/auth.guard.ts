@@ -8,16 +8,27 @@ export class AuthGuard implements CanActivate {
 
   constructor(private dashboardService: DashboardService, private router: Router) { }
 
-  canActivate(): Observable<boolean> {
-    return this.dashboardService.getOrder().map(data => {
-      const show = data['company'].available;
+  route(data) {
+    const show = data['company'].available;
 
       if (!show) {
         this.router.navigateByUrl('/myDashboard');
       }
 
       return show;
+  }
+
+  canActivate(): Observable<boolean> {
+
+    const data = JSON.parse(localStorage.getItem('dashboard'));
+    if (data !== undefined || data !== null) {
+      return this.route(data);
+    }
+
+    return this.dashboardService.getOrder().map(dashboardData => {
+      return this.route(dashboardData);
     });
+
   }
 
 }
