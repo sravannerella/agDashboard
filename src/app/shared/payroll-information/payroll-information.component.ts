@@ -24,6 +24,7 @@ export class PayrollInformationComponent implements AfterViewInit {
    categoryLabel: any;
    graphData: any;
    payrollSummarySize: any;
+  labelTag: any;
 
   constructor(private payrollService: PayrollService) {
     this.color = ['#69b23b', '#2c4b19', '#777', '#93d37c', '#444'];
@@ -36,6 +37,7 @@ export class PayrollInformationComponent implements AfterViewInit {
       this.payrollTotal = res.total;
       this.payrollSummarySize = res.size;
       this.payrollSummarylabel = Object.keys(res.graph);
+      this.labelTag = this.categoryLabel[this.payrollSummarySize];
       Object.entries(res.graph).map(obj => {
       const key = obj[0];
         this.payrollSummaryvalue.push(obj[1][this.payrollSummarySize]);

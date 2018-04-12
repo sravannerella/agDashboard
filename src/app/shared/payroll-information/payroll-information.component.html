@@ -13,7 +13,7 @@
                     <div class="col-xs-6 col-sm-4 payroll_info_list">
                         <h4 class="label">Payroll Summary</h4>
                         <div class="sub tag text-muted pull-right">
-                            <small class="small">This Month</small>
+                            <small class="small">{{labelTag}}</small>
                         </div>
                         <div class="scroll_div">
                             <ul class="scrollable_list">
@@ -33,6 +33,9 @@
                     </div>
                     <div class="col-xs-6 col-sm-3 payroll_info_list">
                         <h4 class="label">Batches</h4>
+                        <div class="sub tag text-muted pull-right">
+                            <small class="small">{{labelTag}}</small>
+                        </div>
                         <div ss-container class="scroll_div">
                             <ul class="scrollable_list">
                                 <li *ngFor="let x of batchSummary;let i = index;" class="text-muted small batchList">
