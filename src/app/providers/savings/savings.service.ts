@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { env } from '../../env';
 import { BaseService } from '../base.service';
+import { CacheService } from '../cache.service';
 
 @Injectable()
 export class SavingsService extends BaseService {
 
-  constructor(http: HttpClient) {
-    super(http);
+  constructor(cache: CacheService) {
+    super(cache);
   }
 
   public getSavings() {

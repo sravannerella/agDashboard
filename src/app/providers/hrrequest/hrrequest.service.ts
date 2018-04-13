@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BaseService } from '../base.service';
-import { HttpClient } from '@angular/common/http';
+import { CacheService } from '../cache.service';
 
 @Injectable()
 export class HrrequestService extends BaseService {
 
-  constructor(http: HttpClient) {
-    super(http);
+  constructor(cache: CacheService) {
+    super(cache);
   }
 
   public getHrRequests() {

@@ -27,6 +27,7 @@ import { LeaveRequestsService } from '../providers/leave-requests/leave-requests
 import { CompanyComponent } from './company/company.component';
 import { MydashboardComponent } from './mydashboard/mydashboard.component';
 import { AuthGuard } from './auth.guard';
+import { CacheService } from '../providers/cache.service';
 
 
 
@@ -74,6 +75,7 @@ const routes: Routes = [
     PayrollService,
     TodosService,
     RecentActivityService,
+    CacheService,
     AuthGuard
   ],
   declarations: [DashboardComponent,
